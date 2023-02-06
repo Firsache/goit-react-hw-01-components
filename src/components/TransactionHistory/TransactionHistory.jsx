@@ -1,26 +1,31 @@
-{/* <table class="transaction-history">
-  <thead>
-    <tr>
-      <th>Type</th>
-      <th>Amount</th>
-      <th>Currency</th>
-    </tr>
-  </thead>
+import PropTypes from 'prop-types';
+export const TransactionHistory = (items) => {
+  return (
+    <table class="transaction-history">
+      <thead>
+        <tr>
+          <th>Type</th>
+          <th>Amount</th>
+          <th>Currency</th>
+        </tr>
+      </thead>
+      {items.map(({ type, amount, currency, id }) => {
+        return (<tbody key={id}>
+          <tr>
+            <td>{type}</td>
+            <td>{amount}</td>
+            <td>{currency}</td>
+          </tr>
+        </tbody>)
+      })}
+    </table>
+  )
+}
 
-  <tbody>
-    <tr>
-      <td>Invoice</td>
-      <td>125</td>
-      <td>USD</td>
-    </tr>
-    <tr>
-      <td>Withdrawal</td>
-      <td>85</td>
-      <td>USD</td>
-    </tr>
-  </tbody>
-</table> */}
+TransactionHistory.propTypes = {
+  type: PropTypes.string.isRequired,
+  amount: PropTypes.string.isRequired,
+  currency: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired
+}
 
-// import transactions from 'path/to/transactions.json';
-
-// <TransactionHistory items={transactions} />;
