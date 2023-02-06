@@ -1,39 +1,36 @@
 import PropTypes from 'prop-types';
 
-export const Profile({ username, tag, location, avatar, stats }) => {
+export const Profile = ({ username, tag, location, avatar, stats }) => {
   return (
     <div class="profile">
       <div class="description">
         <img
           src={avatar}
           alt={tag}
+          width="100"
           class="avatar"
         />
         <p class="name">{username}</p>
-        <p class="tag">{tag}</p>
+        <p class="tag">@{tag}</p>
         <p class="location">{location}</p>
       </div>
-      {stats.map(({ followers, views, likes })=>{
-        return (
-          <ul class="stats">
+      
+      <ul class="stats">
         <li>
           <span class="label">Followers</span>
-          <span class="quantity">{followers}</span>
+          <span class="quantity">{stats.followers}</span>
         </li>
         <li>
           <span class="label">Views</span>
-          <span class="quantity">{views}</span>
+          <span class="quantity">{stats.views}</span>
         </li>
         <li>
           <span class="label">Likes</span>
-          <span class="quantity">{likes}</span>
+          <span class="quantity">{stats.likes}</span>
         </li>
-      </ul>)
-      };
-      );
-      };
+      </ul>
     </div>
-  );
+  )
 };
 
 Profile.propTypes = {
