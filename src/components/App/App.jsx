@@ -1,12 +1,16 @@
-import {  Profile, Statistics} from 'components';
+// import {  Profile, Statistics, StatisticsList, FriendList, FriendListItem,  TransactionHistory} from 'components';
 import user from 'data/user.json';
-import data from '/path/to/data.json';
+import data from 'data/data.json';
+import friends from 'data/friends.json';
+import transitions from 'data/transactions.json';
 
-// FriendList, FriendListItem,  TransactionHistory
+import { Profile } from 'components/Profile/Profile';
+import { Statistics } from 'components/Statistics/Statistics';
+import { StatisticsList } from 'components/Statistics/StatisticsList';
 
 export const App = () => {
   return (
-    <Container>
+    <>
       <Profile
           key={user.username}
           username={user.username}
@@ -14,22 +18,12 @@ export const App = () => {
           location={user.location}
           avatar={user.avatar}
           stats={user.stats}
-        />        
-        <Statistics stats={data} />
-    </Container>
-    // <div
-    //   style={{
-    //     height: '100vh',
-    //     display: 'flex',
-    //     justifyContent: 'center',
-    //     alignItems: 'center',
-    //     fontSize: 40,
-    //     color: '#010101'
-    //   }}
-    // >
-    //   React homework template
-    // </div>
-    
+      />
+      <Statistics title="Upload stats" >
+          <StatisticsList stats={data}/>
+      </Statistics>
+      <FriendList friends={friends} />;
+    </>
   );
 };
 
