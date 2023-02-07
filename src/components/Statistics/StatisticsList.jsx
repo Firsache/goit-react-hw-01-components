@@ -1,6 +1,7 @@
 import PropTypes from 'prop-types';
 
-export const StatisticsList = ({stats}) => {
+export const StatisticsList = (stats) => {
+  console.log(stats);
     return (
       <ul class="stat-list">{stats.map(({ id, label, percentage }) => {
         return (
@@ -15,9 +16,10 @@ export const StatisticsList = ({stats}) => {
 };
 
 StatisticsList.propTypes = {
-  stats: PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    label: PropTypes.string.isRequired,
-    percentage: PropTypes.number.isRequired
-  })
+  stats: PropTypes.array.isRequired
+  // stats: PropTypes.exact({
+  //   id: PropTypes.number.isRequired,
+  //   label: PropTypes.string.isRequired,
+  //   percentage: PropTypes.number.isRequired
+  // })
 }
