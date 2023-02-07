@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-export const TransactionHistory = (items) => {
+export const TransactionHistory = ({ items }) => {
   return (
     <table className="transaction-history">
       <thead>
