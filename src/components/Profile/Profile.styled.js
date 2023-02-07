@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 export const Card = styled.div`
     padding-top: 20px;
+    margin-bottom: 20px;
     max-width: 350px;
     border-radius: 8px;
 
@@ -14,6 +15,12 @@ export const Card = styled.div`
     
     color: #757575;
     font-size: 18px;
+    transition: box-shadow 250ms ease, transform 250ms ease-in-out;
+
+    &:hover{
+        box-shadow: 0px 7px 7px rgba(0, 0, 0, 0.3);
+        transform: translateY(-3px);
+    }
 `
 export const Description = styled.div`
     padding-bottom: 5px;
@@ -34,7 +41,6 @@ export const TextAccent = styled.p`
     color: #2f303a;
     
 `
-
 export const StatsInfo = styled.ul`
     display: flex;
 
@@ -54,6 +60,11 @@ export const StatsItem = styled.li`
     flex-direction: column;
     gap: 8px;
     border: 1px solid #2f303a;
+    transition: color 250ms ease;
+
+    &:hover {
+        color: #ffffff;
+    }
 `
 /* .CardSuperProfile{
     composes: cardProfile;
