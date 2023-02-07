@@ -7,6 +7,7 @@ import transitions from 'data/transactions.json';
 import { Profile } from 'components/Profile/Profile';
 import { Statistics } from 'components/Statistics/Statistics';
 import { StatisticsList } from 'components/Statistics/StatisticsList';
+import { FriendList } from 'components/FriendList/FriendList';
 import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 
 export const App = () => {
@@ -24,7 +25,7 @@ export const App = () => {
           <StatisticsList stats={data}/>
       </Statistics>
       <FriendList friends={friends} />
-      <TransactionHistory items={transactions} />;
+      <TransactionHistory items={transitions} />;
     </>
   );
 };
