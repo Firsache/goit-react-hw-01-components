@@ -6,6 +6,7 @@ max-width: 500px;
 display: flex;
 flex-direction: column;
 background-color: #ffffff;
+box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 `
 
 export const Title = styled.h2`
@@ -32,6 +33,7 @@ padding-top: 15px;
 padding-bottom: 15px;
 
 font-size: 20px;
+
+background-color: ${p => p.backgroundColor};
 color: #ffffff;
-background-color: blue;
 `
