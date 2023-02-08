@@ -27,7 +27,7 @@ align-self: center;
 border-radius: 50%;
 margin-right: 20px;
 
-background-color: ${({current}) => current ? "lightgreen" : "red"};
+background-color: ${({current}) => current ? "lightgreen" : "lightcoral"};
 `
 export const FriendAvatar = styled.img`
 margin-right: 30px;
