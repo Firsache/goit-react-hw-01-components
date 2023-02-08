@@ -1,5 +1,11 @@
 export function generateRandomColor() {
-  var randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-  
+  const randomColor = `#${Math.floor(Math.random() * 16777215)
+    .toString(16)
+    .padStart(6, 0)}`;
+
+  if (randomColor === '#ffffff') {
+    generateRandomColor();
+  }
+
   return randomColor;
 }
