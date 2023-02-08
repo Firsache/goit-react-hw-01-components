@@ -27,8 +27,8 @@ export const OnlineIndicator = styled.span`
   border-radius: 50%;
   margin-right: 20px;
 
-  background-color: ${({ current }) => (current ? 'lightgreen' : 'lightcoral')};
-`;
+background-color: ${({current}) => current ? "lightgreen" : "lightcoral"};
+`
 export const FriendAvatar = styled.img`
   margin-right: 30px;
   padding: 4px 10px;
@@ -36,6 +36,6 @@ export const FriendAvatar = styled.img`
   border-radius: 4px;
 `;
 export const FriendName = styled.p`
-  align-self: center;
-  font-size: 20px;
-`;
+align-self: center;
+font-size: 20px;
+`
