@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 export const FriendsList = styled.ul`
+    margin-bottom: 30px;
     display: flex;
     flex-direction: column;
     max-width: 350px;
@@ -20,13 +21,13 @@ transition: box-shadow 250ms ease-in, transform 250ms ease-in;
 `
 
 export const OnlineIndicator = styled.span`
-width: 25px;
-height: 25px;
+width: 20px;
+height: 20px;
 align-self: center;
 border-radius: 50%;
 margin-right: 20px;
 
-background-color: ${isOnline => isOnline ? "darkgreen" : "red"};
+background-color: ${({current}) => current ? "lightgreen" : "red"};
 `
 export const FriendAvatar = styled.img`
 margin-right: 30px;
