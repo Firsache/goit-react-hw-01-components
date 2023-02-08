@@ -28,7 +28,7 @@ export const App = () => {
           <StatisticsList stats={data}/>
       </Statistics>
       <FriendList friends={friends} />
-      <TransactionHistory items={transitions} />;
+      <TransactionHistory items={transitions} />
       <GlobalStyles/>
     </Container>
   );
